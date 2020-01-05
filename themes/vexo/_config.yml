@@ -1,0 +1,57 @@
+author: yanm1ng # 作者
+description: DD's Home
+keyword: hexo-theme, vuejs
+favicon: https://coding.net/u/Kiva/p/Kiva.coding.me/git/raw/master/css/images/logo.png
+
+excerpt_link: 阅读全文
+
+menu:
+ Home: /
+# Tags: /tags/
+# Archives: /archives/
+# Projects: /project/
+ About: /about/
+
+# highlight
+highlight:
+  tomorrow
+
+# catalog
+catalog: true
+
+# donate
+donate: true
+
+# qrcode
+qrcode: true
+
+# comment
+# you can set gitment or uyan
+
+comment: gitment
+
+# gitment config
+gitment_owner: imkiva
+gitment_repo: ddhammer.fun
+gitment_oauth_id: c65c479a3282ef71e914
+gitment_oauth_secret: 1bab3c3e3354861f37264c43eb275cb595057edd
+
+# uyan
+# if you want to use uyan as your blog comment, plz remove/comment out gitment config
+
+baidu_id: 
+
+about: 
+  banner: http://file.muyutech.com/about.jpg
+  avatar: https://coding.net/u/Kiva/p/Kiva.coding.me/git/raw/master/css/images/logo.png
+  description: "Talk is cheap, show me the code."
+  github_username: imkiva
+  weibo_username: NNRRK
+  zhihu_username: kiva-76
+
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=default
