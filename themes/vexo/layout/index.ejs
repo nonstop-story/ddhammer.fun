@@ -1,26 +1,87 @@
-<main class="app-body">
-  <% page.posts.each(function(post) { %>
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
-      </h2>
-      <p class="article-date"><%- date(post.date, "LL") %></p>
-      <% if (post.tags && post.tags.length) { %>
-        <%- partial('_partial/tag', { tags: post.tags }) %>
-      <% } %>
-      <div class="article-summary">
-        <% if (post.excerpt) { %>
-          <%- post.excerpt %>
-        <% } else { %>
-          <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
-        <% } %>
-      </div>
-      <a class="more" href="<%- url_for(post.path) %>"><%- theme.excerpt_link %></a>
-    </article>
-  <% }) %>
-
-  <% if (page.total > 1){ %>
-    <%- partial('_partial/pager') %>
-  <% } %>
+<div id="article-banner">
+  <h2>做一个熟练切换单推的 DD</h2>
+  <p class="post-date">直播列表</p>
+  <img src="/css/images/inspiration.png"/>
+</div>
+<main class="app-body project-app">
+  <div class="card-container" id="all-project"></div>
 </main>
+<script>
+  /**
+   * Return true if the live room is streaming.
+   */
+  function isLiveRoomStreaming(roomUrl, callback) {
+    var pattern = /live\.bilibili\.com\/(\d+)/;
+    var groups = roomUrl.match(pattern);
 
+    // Only bilibili live is supported yet.
+    // PRs are welcomed.
+    if (groups == null) {
+      return false;
+    }
+
+    var roomId = groups[1];
+    var apiUrl = "http://120.79.193.152:23332/live/room_init?id=" + roomId;
+
+    $.ajax({
+      url: apiUrl,
+      type: 'get',
+      success: function(data) {
+        console.log("Request success");
+        const res = JSON.parse(data);
+        const status = parseInt(res.data.live_status.toString());
+
+        var statusText = "服务器出错啦"
+        switch (status) {
+          case 0: statusText = "未开播"; break;
+          case 1: statusText = "正在直播"; break;
+          case 2: statusText = "轮播中"; break;
+        }
+
+        callback(status == 1, statusText);
+      },
+      error: function(data) {
+        callback(false, "服务器出错啦");
+      }
+    });
+  }
+
+  (function() {
+    var url = '<%= config.url %>/<%= page.path %>';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header')
+    
+    // obtain vtuber status
+    <% for(index in theme.vtubers) { %>
+      <% 
+        let v = theme.vtubers[index];
+        let name = v["name"];
+        let room = v["room"];
+        let avatar = v["avatar"];
+      %>
+
+      isLiveRoomStreaming("<%= room %>", function(streaming, statusText) {
+        var cardHtml = 
+          '<section class="project-card">' + 
+            '<a class="card-wrap" href="<%= room %>" target="_blank">' +
+              '<div class="card-header" data-name="<%= name %>"></div>' +
+              '<h3 class="card-title"><%= name %></h3>' +
+              '<p class="card-description">' + statusText + '</p>' +
+              '<div class="card-footer">' +
+                '<span><i class="fa fa-star"></i>'+ 0 +'</span>' +
+                '<span><i class="fa fa-code-fork"></i>' + 1 +'</span>' +
+              '</div>' +
+            '</a>' +
+          '</section>';
+
+        $('#all-project').html($('#all-project').html() + cardHtml)
+        $('.card-header').each(function() {
+          var name = $(this).data('name');
+          $(this).geopattern(name);
+        })
+      });
+
+    <% } %>
+
+  })()
+</script>
