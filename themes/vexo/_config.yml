@@ -56,75 +56,75 @@ mathjax:
 
 vtubers:
   - name: 泠鸢 Yousa
-    avatar: https://i2.hdslb.com/bfs/face/c45b540d71e56da8127b44c318c97fe4b7d46a4a.jpg_64x64.jpg
+    avatar: /css/avatars/yousa.jpg
     room: https://live.bilibili.com/593
 
   - name: 白上吹雪 Offical
-    avatar: https://i0.hdslb.com/bfs/face/7536a4017786e139e7a25ba5ae04d85424cb26e6.jpg_64x64.jpg
+    avatar: /css/avatars/fubuki.jpg
     room: https://live.bilibili.com/11588230
 
   - name: 夏色祭Official
-    avatar: https://i0.hdslb.com/bfs/face/74e81b752fce69fd58aefa42ccc7310dcded8267.jpg_64x64.jpg
+    avatar: /css/avatars/natsuri.jpg
     room: https://live.bilibili.com/13946381
 
   - name: 湊-阿库娅Official
-    avatar: https://i0.hdslb.com/bfs/face/b43b8e7d5d051d7ecf0b50afb7d45275112c70fc.jpg_64x64.jpg
+    avatar: /css/avatars/aqua.jpg
     room: https://live.bilibili.com/14917277
 
   - name: 神楽Mea_Official
-    avatar: https://i0.hdslb.com/bfs/face/3a356b0815815fed0c84b9d54415a58fb0da3e5f.jpg_64x64.jpg
+    avatar: /css/avatars/mea.jpg
     room: https://live.bilibili.com/12235923
 
   - name: 新科娘Official
-    avatar: https://i2.hdslb.com/bfs/face/0cae2f42e9ec5d849b228979c3885d7052ded248.jpg_64x64.jpg
+    avatar: /css/avatars/xinke.jpg
     room: https://live.bilibili.com/21602686
 
   - name: 神楽七奈Official
-    avatar: https://i2.hdslb.com/bfs/face/4146be13fbae06813d954775006405df1da9ff10.jpg_64x64.jpg
+    avatar: /css/avatars/nanane.jpeg
     room: https://live.bilibili.com/21304638
 
   - name: 兔田佩克拉Official
-    avatar: https://i1.hdslb.com/bfs/face/c9c023a6054f6b38ade9b6987d2bf4464013508f.jpg_64x64.jpg
+    avatar: /css/avatars/pekora.jpeg
     room: https://live.bilibili.com/21560356
   
   - name: 赤井心Official
-    avatar: https://i2.hdslb.com/bfs/face/2b07737e60b24e3810a706cbb93e9508eaba189c.jpg_64x64.jpg
+    avatar: /css/avatars/xinxin.jpg
     room: https://live.bilibili.com/14275133
 
   - name: 樱巫女Official
-    avatar: https://i1.hdslb.com/bfs/face/958a821d91600efc58e9f903332c5e65eb69bc97.jpg_64x64.jpg
+    avatar: /css/avatars/sakura.jpg
     room: https://live.bilibili.com/21144047
   
   - name: 润羽露西娅Official
-    avatar: https://i1.hdslb.com/bfs/face/02ed295974c72468474acecb7f47d4ff257012f9.jpg_64x64.jpg
+    avatar: /css/avatars/lucia.jpg
     room: https://live.bilibili.com/21545232
 
   - name: 夜空梅露Official
-    avatar: https://i1.hdslb.com/bfs/face/a55e274fba2c927b5a9192a661ee24f6e902126e.jpg_64x64.jpg
+    avatar: /css/avatars/meilu.jpeg
     room: https://live.bilibili.com/21131813
   
   - name: 物述有栖Official
-    avatar: https://i1.hdslb.com/bfs/face/934fe83deabe1263b1c2a8aca13d0804b4024326.jpg_64x64.jpg
+    avatar: /css/avatars/wushu.jpeg
     room: https://live.bilibili.com/21449083
 
   - name: 陆婉莹GodRiku
-    avatar: https://i0.hdslb.com/bfs/face/d85ad9d63fb61a9091d090ea1cf2cba476b09c65.jpg_64x64.jpg
+    avatar: /css/avatars/godriku.jpg
     room: https://live.bilibili.com/11575621
   
   - name: 高槻律official
-    avatar: https://i0.hdslb.com/bfs/face/88c79a8f4aaa35dff7f177fad12a88a9e7471e1d.jpg_64x64.jpg
+    avatar: /css/avatars/lv.jpg
     room: https://live.bilibili.com/947447
 
   - name: 战斗吧歌姬官方账号
-    avatar: https://i0.hdslb.com/bfs/face/1ce748a8235ee2f7d4c12ff36ec7cde76b9118d4.jpg_64x64.jpg
+    avatar: /css/avatars/fighting.jpg
     room: https://live.bilibili.com/14578426
 
   - name: Overidea_China
-    avatar: https://i0.hdslb.com/bfs/face/7fceffe7a0cc8b41f82b19156ef91a6d19134980.jpg_64x64.jpg
+    avatar: /css/avatars/overidea.jpg
     room: https://live.bilibili.com/704808
 
   - name: 帕里_Paryi
-    avatar: https://i2.hdslb.com/bfs/face/5646f1dbfe83e3143d3b8bc44b25fcd1a25e948e.jpg_64x64.jpg
+    avatar: /css/avatars/paryi.jpeg
     room: https://live.bilibili.com/4895312
   
 
