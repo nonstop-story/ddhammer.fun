@@ -86,6 +86,6 @@ archive_generator:
 deploy:
     type: git
     repo: 
-        coding: git@github.com:imkiva/ddhammer.fun.git
+        coding: git@github.com:nonstop-story/ddhammer.fun.git
     branch: gh-pages
     message: 
