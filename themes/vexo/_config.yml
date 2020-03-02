@@ -80,7 +80,7 @@ vtubers:
     room: https://live.bilibili.com/21602686
 
   - name: 神楽七奈Official
-    avatar: /css/avatars/nanane.jpeg
+    avatar: /css/avatars/kaguranana.jpg
     room: https://live.bilibili.com/21304638
 
   - name: 兔田佩克拉Official
@@ -100,7 +100,7 @@ vtubers:
     room: https://live.bilibili.com/21545232
 
   - name: 夜空梅露Official
-    avatar: /css/avatars/meilu.jpeg
+    avatar: /css/avatars/meru.jpg
     room: https://live.bilibili.com/21131813
   
   - name: 物述有栖Official
@@ -124,7 +124,47 @@ vtubers:
     room: https://live.bilibili.com/704808
 
   - name: 帕里_Paryi
-    avatar: /css/avatars/paryi.jpeg
+    avatar: /css/avatars/paryi.jpg
     room: https://live.bilibili.com/4895312
   
+  - name: 花园Serena
+    avatar: /css/avatars/serena.jpg
+    room: https://live.bilibili.com/14327465
 
+  - name: 黑桃影
+    avatar: /css/avatars/echo.jpg
+    room: https://live.bilibili.com/21641569
+
+  - name: 角卷绵芽Official
+    avatar: /css/avatars/watame.jpg
+    room: https://live.bilibili.com/21752694
+
+  - name: 白神遥Haruka
+    avatar: /css/avatars/haruka.jpg
+    room: https://live.bilibili.com/21652717
+
+  - name: 进击的冰糖
+    avatar: /css/avatars/bt.jpg
+    room: https://live.bilibili.com/876396
+
+  - name: 時雨羽衣Official
+    avatar: /css/avatars/ui.jpg
+    room: https://live.bilibili.com/9389401
+
+  - name: 佐久間ねむOfficial
+    avatar: /css/avatars/nemu.jpg
+    room: https://live.bilibili.com/21666922                  
+
+  - name: Mana-Soy_Channel
+    avatar: /css/avatars/soy.jpg
+    room: https://live.bilibili.com/3822389
+
+  - name: 夢乃栞Yumeno_Shiori
+    avatar: /css/avatars/shiori.jpg
+    room: https://live.bilibili.com/14052636
+
+  - name: 紫咲诗音Official
+    avatar: /css/avatars/shion.jpg
+    room: https://live.bilibili.com/21132965
+
+ 
