@@ -56,115 +56,90 @@ mathjax:
 
 vtubers:
   - name: 泠鸢 Yousa
-    avatar: /css/avatars/yousa.jpg
-    room: https://live.bilibili.com/593
+    mid: 282994
 
   - name: 白上吹雪 Offical
-    avatar: /css/avatars/fubuki.jpg
-    room: https://live.bilibili.com/11588230
+    mid: 332704117
 
   - name: 夏色祭Official
-    avatar: /css/avatars/natsuri.jpg
-    room: https://live.bilibili.com/13946381
+    mid: 336731767
 
   - name: 湊-阿库娅Official
-    avatar: /css/avatars/aqua.jpg
-    room: https://live.bilibili.com/14917277
+    mid: 375504219
 
   - name: 神楽Mea_Official
-    avatar: /css/avatars/mea.jpg
-    room: https://live.bilibili.com/12235923
+    mid: 349991143
 
   - name: 新科娘Official
-    avatar: /css/avatars/xinke.jpg
-    room: https://live.bilibili.com/21602686
+    mid: 451066708
 
   - name: 神楽七奈Official
-    avatar: /css/avatars/kaguranana.jpg
-    room: https://live.bilibili.com/21304638
+    mid: 386900246
 
   - name: 兔田佩克拉Official
-    avatar: /css/avatars/pekora.jpeg
-    room: https://live.bilibili.com/21560356
+    mid: 443305053
   
   - name: 赤井心Official
-    avatar: /css/avatars/xinxin.jpg
-    room: https://live.bilibili.com/14275133
+    mid: 339567211
 
   - name: 樱巫女Official
-    avatar: /css/avatars/sakura.jpg
-    room: https://live.bilibili.com/21144047
+    mid: 366690056
   
   - name: 润羽露西娅Official
-    avatar: /css/avatars/lucia.jpg
-    room: https://live.bilibili.com/21545232
+    mid: 443300418
 
   - name: 夜空梅露Official
-    avatar: /css/avatars/meru.jpg
-    room: https://live.bilibili.com/21131813
+    mid: 389856447
   
   - name: 物述有栖Official
-    avatar: /css/avatars/wushu.jpeg
-    room: https://live.bilibili.com/21449083
+    mid: 434565011
 
   - name: 陆婉莹GodRiku
-    avatar: /css/avatars/godriku.jpg
-    room: https://live.bilibili.com/11575621
+    mid: 337827661
   
   - name: 高槻律official
-    avatar: /css/avatars/lv.jpg
-    room: https://live.bilibili.com/947447
+    mid: 6055289
 
   - name: 战斗吧歌姬官方账号
-    avatar: /css/avatars/fighting.jpg
-    room: https://live.bilibili.com/14578426
+    mid: 364225566
 
   - name: Overidea_China
-    avatar: /css/avatars/overidea.jpg
-    room: https://live.bilibili.com/704808
+    mid: 18149131
 
   - name: 帕里_Paryi
-    avatar: /css/avatars/paryi.jpg
-    room: https://live.bilibili.com/4895312
+    mid: 1576121
   
   - name: 花园Serena
-    avatar: /css/avatars/serena.jpg
-    room: https://live.bilibili.com/14327465
+    mid: 380829248
 
   - name: 黑桃影
-    avatar: /css/avatars/echo.jpg
-    room: https://live.bilibili.com/21641569
+    mid: 456368455
 
   - name: 角卷绵芽Official
-    avatar: /css/avatars/watame.jpg
-    room: https://live.bilibili.com/21752694
+    mid: 491474050
 
   - name: 白神遥Haruka
-    avatar: /css/avatars/haruka.jpg
-    room: https://live.bilibili.com/21652717
+    mid: 477332594
 
   - name: 进击的冰糖
-    avatar: /css/avatars/bt.jpg
-    room: https://live.bilibili.com/876396
+    mid: 198297
 
   - name: 時雨羽衣Official
-    avatar: /css/avatars/ui.jpg
-    room: https://live.bilibili.com/9389401
+    mid: 2601367
 
   - name: 佐久間ねむOfficial
-    avatar: /css/avatars/nemu.jpg
-    room: https://live.bilibili.com/21666922                  
+    mid: 476903292             
 
   - name: Mana-Soy_Channel
-    avatar: /css/avatars/soy.jpg
-    room: https://live.bilibili.com/3822389
+    mid: 3149619
 
   - name: 夢乃栞Yumeno_Shiori
-    avatar: /css/avatars/shiori.jpg
-    room: https://live.bilibili.com/14052636
+    mid: 372984197
 
   - name: 紫咲诗音Official
-    avatar: /css/avatars/shion.jpg
-    room: https://live.bilibili.com/21132965
+    mid: 389857640
+
+  - name: 常暗永远Official
+    mid: 491474051
 
  

@@ -40,65 +40,23 @@
   };
 
   /**
-   * Get live room status.
-   */
-  function isLiveRoomStreaming(roomUrl, callback) {
-    var pattern = /live\.bilibili\.com\/(\d+)/;
-    var groups = roomUrl.match(pattern);
-
-    // Only bilibili live is supported yet.
-    // PRs are welcomed.
-    if (groups == null) {
-      return false;
-    }
-
-    var roomId = groups[1];
-    var apiUrl = "http://120.79.193.152:23332/live/room_init?id=" + roomId;
-
-    $.ajax({
-      url: apiUrl,
-      type: 'get',
-      success: function(data) {
-        const res = JSON.parse(data);
-        const status = parseInt(res.data.live_status.toString());
-
-        if (status < LiveStatus.CLOSED || status > LiveStatus.ERROR) {
-          status = LiveStatus.ERROR;
-        }
-
-        if (status != LiveStatus.STREAMING) {
-          callback(status, null);
-        } else {
-          getRoomInfo(res.data.room_id, callback);
-        }
-      },
-      error: function(data) {
-        callback(LiveStatus.ERROR);
-      }
-    });
-  }
-
-  /**
    * Get live room information
    */
-  function getRoomInfo(roomId, callback) {
-    var apiUrl = "http://120.79.193.152:23332/live/room_info?id=" + roomId;
+  function getRoomInfo(mid, callback) {
+    var apiUrl = "https://api.vtbs.moe/v1/detail/" + mid;
 
     $.ajax({
       url: apiUrl,
       type: 'get',
       success: function(data) {
         try {
-          const res = JSON.parse(data);
-          const title = res.data.title.toString();
-
-          callback(LiveStatus.STREAMING, title);
+          callback(data);
         } catch (ignore) {
-          callback(LiveStatus.STREAMING, null);
+          console.log(ignore);
         }
       },
       error: function(data) {
-        callback(LiveStatus.ERROR);
+        callback(null);
       }
     });
   }
@@ -113,26 +71,33 @@
       <% 
         let v = theme.vtubers[index];
         let name = v["name"];
-        let room = v["room"];
-        let avatar = v["avatar"];
+        let mid = v["mid"];
       %>
 
-      isLiveRoomStreaming("<%= room %>", function(status, title) {
-        var statusText = LiveStatus.text[status];
+      getRoomInfo("<%= mid %>", function(res) {
+        var title = res.title.toString();
+        var status = res.liveStatus;
+        if (title.indexOf("的投稿视频") >= 0) {
+          status = LiveStatus.LOOPING;
+        }
+        var uname = res.uname;
+        var avatar = res.face;
+        var liveUrl = "https://live.bilibili.com/" + res.roomid;
+        var statusText = status == LiveStatus.STREAMING ? title : LiveStatus.text[status];
         var divId = LiveStatus.divId[status];
 
         var cardHtml = 
           '<section class="project-card">' + 
-            '<a class="card-wrap" href="<%= room %>" target="_blank">' +
-              '<div class="card-header" data-name="<%= name %>"></div>' +
+            '<a class="card-wrap" href="' + liveUrl + '" target="_blank">' +
+              '<div class="card-header" data-name="' + uname + '"></div>' +
               '<div class="card-body">' +
-                '<img class="card-avatar" src="<%= avatar %>"/>' +
-                '<h3 class="card-title"><%= name %></h3>' +
-                '<p class="card-description">' + statusText + (title != null ? ":" + title : "") + '</p>' +
+                '<img class="card-avatar" src="' + avatar + '"/>' +
+                '<h3 class="card-title">' + uname + '</h3>' +
+                '<p class="card-description">' + statusText + '</p>' +
               '</div>' +
               '<div class="card-footer">' +
-                '<span><i class="fa fa-star"></i>'+ 0 +'</span>' +
-                '<span><i class="fa fa-code-fork"></i>' + 0 +'</span>' +
+                '<span><i class="fa fa-star"></i>'+ res.follower.toString() +'</span>' +
+                '<span><i class="fa fa-code-fork"></i>' + res.video.toString() +'</span>' +
               '</div>' +
             '</a>' +
           '</section>';
