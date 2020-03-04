@@ -40,7 +40,7 @@
   };
 
   /**
-   * Return true if the live room is streaming.
+   * Get live room status.
    */
   function isLiveRoomStreaming(roomUrl, callback) {
     var pattern = /live\.bilibili\.com\/(\d+)/;
@@ -66,7 +66,36 @@
           status = LiveStatus.ERROR;
         }
 
-        callback(status);
+        if (status != LiveStatus.STREAMING) {
+          callback(status, null);
+        } else {
+          getRoomInfo(res.data.room_id, callback);
+        }
+      },
+      error: function(data) {
+        callback(LiveStatus.ERROR);
+      }
+    });
+  }
+
+  /**
+   * Get live room information
+   */
+  function getRoomInfo(roomId, callback) {
+    var apiUrl = "http://120.79.193.152:23332/live/room_info?id=" + roomId;
+
+    $.ajax({
+      url: apiUrl,
+      type: 'get',
+      success: function(data) {
+        try {
+          const res = JSON.parse(data);
+          const title = res.data.title.toString();
+
+          callback(LiveStatus.STREAMING, title);
+        } catch (ignore) {
+          callback(LiveStatus.STREAMING, null);
+        }
       },
       error: function(data) {
         callback(LiveStatus.ERROR);
@@ -88,7 +117,7 @@
         let avatar = v["avatar"];
       %>
 
-      isLiveRoomStreaming("<%= room %>", function(status) {
+      isLiveRoomStreaming("<%= room %>", function(status, title) {
         var statusText = LiveStatus.text[status];
         var divId = LiveStatus.divId[status];
 
@@ -99,7 +128,7 @@
               '<div class="card-body">' +
                 '<img class="card-avatar" src="<%= avatar %>"/>' +
                 '<h3 class="card-title"><%= name %></h3>' +
-                '<p class="card-description">' + statusText + '</p>' +
+                '<p class="card-description">' + statusText + (title != null ? ":" + title : "") + '</p>' +
               '</div>' +
               '<div class="card-footer">' +
                 '<span><i class="fa fa-star"></i>'+ 0 +'</span>' +
