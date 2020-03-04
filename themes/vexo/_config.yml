@@ -1,7 +1,7 @@
 author: yanm1ng # 作者
 description: DD's Home
 keyword: hexo-theme, vuejs
-favicon: https://coding.net/u/Kiva/p/Kiva.coding.me/git/raw/master/css/images/logo.png
+favicon: https://kiva.coding.net/p/ddhammer.fun/d/ddhammer.fun/git/raw/master/css/images/dd.webp
 
 excerpt_link: 阅读全文
 
@@ -29,7 +29,7 @@ qrcode: true
 comment: gitment
 
 # gitment config
-gitment_owner: imkiva
+gitment_owner: nonstop-story
 gitment_repo: ddhammer.fun
 gitment_oauth_id: c65c479a3282ef71e914
 gitment_oauth_secret: 1bab3c3e3354861f37264c43eb275cb595057edd
@@ -40,12 +40,10 @@ gitment_oauth_secret: 1bab3c3e3354861f37264c43eb275cb595057edd
 baidu_id: 
 
 about: 
-  banner: http://file.muyutech.com/about.jpg
-  avatar: https://coding.net/u/Kiva/p/Kiva.coding.me/git/raw/master/css/images/logo.png
-  description: "Talk is cheap, show me the code."
-  github_username: imkiva
-  weibo_username: NNRRK
-  zhihu_username: kiva-76
+  banner: https://kiva.coding.net/p/ddhammer.fun/d/ddhammer.fun/git/raw/master/css/images/hololive1st.jpg
+  avatar: https://kiva.coding.net/p/ddhammer.fun/d/ddhammer.fun/git/raw/master/css/images/dd.webp
+  description: "不要停下来啊！！！"
+  github_username: nonstop-story
 
 # MathJax Support
 mathjax:
@@ -58,7 +56,7 @@ vtubers:
   - name: 泠鸢 Yousa
     mid: 282994
 
-  - name: 白上吹雪 Offical
+  - name: 白上吹雪Offical
     mid: 332704117
 
   - name: 夏色祭Official

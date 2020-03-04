@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: DD's Home
-subtitle: Unlimited
+title: DD 之家
+subtitle: D 无止境
 description:
-author: Kiva
+author: nonstop-story
 language: en
 timezone:
 
@@ -86,6 +86,6 @@ archive_generator:
 deploy:
     type: git
     repo: 
-        coding: git@github.com:nonstop-story/ddhammer.fun.git
-    branch: gh-pages
+        coding: git@e.coding.net:Kiva/ddhammer.fun.git
+    branch: master
     message: 
